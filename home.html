@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apple Gadgets & Phones - BEST-GADGET's</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <h1>BEST-GADGET's</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="#products" class="nav-link">Products</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                    <li><a href="login.html" class="nav-link login-link">Login</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>LATEST INNOVATION</h1>
+            <p>Experience the Latest Apple Gadgets & Phones</p>
+            <button class="cta-button">Shop Now</button>
+        </div>
+        <div class="hero-image">
+            <div class="device-mockup">📱</div>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="filter-section">
+        <div class="container">
+            <h2>Find Your Perfect Device</h2>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All Products</button>
+                <button class="filter-btn" data-filter="iphone">iPhones</button>
+                <button class="filter-btn" data-filter="ipad">iPads</button>
+                <button class="filter-btn" data-filter="watch">Apple Watch</button>
+                <button class="filter-btn" data-filter="airpods">AirPods</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products-section">
+        <div class="container">
+            <h2>Our Apple Collection</h2>
+            <div class="products-grid" id="productsGrid">
+                <!-- Products will be dynamically loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Detail Modal -->
+    <div class="modal" id="productModal">
+        <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img id="modalImage" src="" alt="Product">
+                </div>
+                <div class="modal-details">
+                    <h2 id="modalTitle"></h2>
+                    <p id="modalCategory" class="category-badge"></p>
+                    <p id="modalDescription" class="description"></p>
+                    
+                    <div class="specs">
+                        <h3>Specifications</h3>
+                        <ul id="modalSpecs"></ul>
+                    </div>
+
+                    <div class="price-section">
+                        <span class="price" id="modalPrice"></span>
+                        <span class="rating" id="modalRating"></span>
+                    </div>
+
+                    <div class="modal-actions">
+                        <button class="btn btn-primary" id="addToCartBtn">Add to Cart</button>
+                        <button class="btn btn-secondary" id="favoriteBtn">❤️ Favorite</button>
+                    </div>
+
+                    <div class="availability" id="availabilityStatus"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2>Why Choose BEST-GADGET's?</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">✓</div>
+                    <h3>100% Original</h3>
+                    <p>Authentic Apple products with official warranty</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🚚</div>
+                    <h3>Fast Delivery</h3>
+                    <p>Free shipping on orders over $50</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">💰</div>
+                    <h3>Best Prices</h3>
+                    <p>Competitive pricing with regular discounts</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🛡️</div>
+                    <h3>Secure Checkout</h3>
+                    <p>Protected payments and data security</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <div class="contact-content">
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Your Message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+                <div class="contact-info">
+                    <div class="info-item">
+                        <h3>📞 Phone</h3>
+                        <p>+234 (9038656497)</p>
+                    </div>
+                    <div class="info-item">
+                        <h3>📧 Email</h3>
+                        <p>support@bestgadgets.com</p>
+                    </div>
+                    <div class="info-item">
+                        <h3>📍 Location</h3>
+                        <p>12th floor bella vista banana island lagos</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2026 BEST-GADGET's. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#" class="social-link">Facebook</a>
+                <a href="#" class="social-link">Twitter</a>
+                <a href="#" class="social-link">Instagram</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="utils.js"></script>
+    <script src="home.js"></script>
+</body>
+</html>

@@ -1,0 +1,264 @@
+#body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #333;
+}
+header {
+  background-color: whitesmoke;
+  text-align: center;
+  padding: 10px;
+}
+* Style the topnav */
+ul.topnav {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: black;
+}
+
+/* Style links in topnav */
+ul.topnav li a {
+  display: block;
+  color: black;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+ul.topnav li a:hover {
+  background-color: #dddddd;
+  color: black;
+}
+    div.flex-container {
+  display: flex;
+  /* Show the flex items horizontally */
+  flex-direction: row;
+}
+
+div.flex-container > div {
+  margin: 10px;
+}
+
+/* Use media query and show the flex items vertically if screen width is less than 600px */
+@media screen and (max-width:600px) {
+  div.flex-container {
+    flex-direction: column;
+  }
+}
+
+/* Card Styles */
+.card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 350px;
+    margin: 20px auto;
+    font-family: Arial, sans-serif;
+    align-items: center;
+    justify-content: space-around;
+    display: inline-block;
+    margin: 5%;
+}
+
+.image-placeholder img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.category-tag {
+    display: inline-block;
+    background-color: #3498db;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+    margin: 16px;
+}
+
+.card-title {
+    font-size: 24px;
+    margin: 0 16px;
+    color: #333;
+}
+
+.card-description {
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 16px;
+    color: #666;
+}
+
+.read-more-btn {
+    display: block;
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 16px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.read-more-btn:hover {
+    background-color: #229954;
+}
+
+/* ===== JAVASCRIPT-ENHANCED STYLES ===== */
+
+/* Navigation active state */
+ul.topnav li a.active {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+}
+
+/* Card hover effects */
+.card-hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+/* Card animation on scroll */
+.card {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease;
+}
+
+.card.animate-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Button click effect */
+.read-more-btn.btn-clicked {
+    transform: scale(0.95);
+    transition: transform 0.1s ease;
+}
+
+/* Mobile navigation */
+@media screen and (max-width: 768px) {
+    ul.topnav {
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 250px;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.9);
+        padding-top: 60px;
+        transition: right 0.3s ease;
+        z-index: 1000;
+    }
+
+    ul.topnav.mobile-open {
+        right: 0;
+    }
+
+    ul.topnav li a {
+        color: white;
+        padding: 20px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    ul.topnav li a:hover,
+    ul.topnav li a.active {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+}
+
+/* Scroll progress bar */
+#scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 4px;
+    background: linear-gradient(90deg, #007bff, #28a745);
+    z-index: 1000;
+    transition: width 0.3s ease;
+}
+
+/* Enhanced card styling */
+.card {
+    position: relative;
+    overflow: hidden;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.card:hover::before {
+    left: 100%;
+}
+
+/* Button hover animation */
+.read-more-btn {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.read-more-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s ease;
+}
+
+.read-more-btn:hover::before {
+    left: 100%;
+}
+
+/* Loading animation for cards */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card.animate-in {
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+/* Responsive improvements */
+@media screen and (max-width: 480px) {
+    .card {
+        margin: 10px;
+        max-width: calc(100% - 20px);
+    }
+
+    .card-title {
+        font-size: 20px;
+    }
+
+    .card-description {
+        font-size: 14px;
+    }
+}
